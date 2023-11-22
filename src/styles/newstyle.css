@@ -1,0 +1,355 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f3e7;
+}
+body h2 {
+  font-size: 2rem;
+  color: #454545;
+  margin: 2%;
+  padding: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  background-color: #f9e17e;
+  font-weight: 600;
+  z-index: 3;
+}
+.header #Logo {
+  margin: 0 1rem;
+}
+.header nav {
+  margin: 1rem;
+}
+.header nav .nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 1rem;
+  padding: 0;
+}
+.header nav .nav__links a {
+  color: #454545;
+  text-decoration: none;
+}
+
+.hero {
+  z-index: 1;
+  background-image: url(../Images/LightOfTheSun.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.hero .hero__content {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.hero .hero__content h1 {
+  font-size: 3rem;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+}
+.hero .hero__content p {
+  font-size: 1.5rem;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+}
+.hero .hero__content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9e17e;
+  color: #454545;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero .hero__content button:hover {
+  background-color: #454545;
+  color: #f9e17e;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+.products .product {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.products .product .product__title {
+  font-size: 1.5rem;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+.products .product .product__text {
+  font-size: 1rem;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+}
+.products .product .product__btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9e17e;
+  color: #454545;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.products .product .product__btn:hover {
+  background-color: #454545;
+  color: #f9e17e;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+.reviews .review {
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: left;
+  align-items: center;
+}
+.reviews .review .review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+.reviews .review .review-author {
+  font-size: 0.8rem;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+}
+.reviews .review .review-date {
+  font-size: 0.8rem;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+}
+
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 95%;
+  height: 50vb;
+  margin: 1.5rem;
+  background-color: #f9e17e;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+}
+.newsletter .newsletter-card {
+  background-color: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  width: 70%;
+  justify-content: space-evenly;
+}
+.newsletter .newsletter-card .newsletter-title {
+  font-size: 1.5rem;
+  color: #454545;
+  margin: 0;
+  /* padding: 2em; */
+  font-weight: 700;
+}
+.newsletter .newsletter-card .newsletter-checkbox {
+  display: none;
+}
+.newsletter .newsletter-card .newsletter-checkbox:checked + .newsletter-form-container .newsletter-form {
+  width: 30em;
+}
+.newsletter .newsletter-card .newsletter-checkbox:checked + .newsletter-form-container .newsletter-form__toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.newsletter .newsletter-card .newsletter-checkbox:checked + .newsletter-form-container .newsletter-form__input,
+.newsletter .newsletter-card .newsletter-checkbox:checked + .newsletter-form-container .newsletter-form__button-label {
+  transition: 0.2s 0.1s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.newsletter .newsletter-card .newsletter-checkbox:not(:checked) + .newsletter-form-container .newsletter-form__input:required:valid ~ .newsletter-form__toggle::before, .newsletter .newsletter-card .newsletter-checkbox:checked + .newsletter-form-container .newsletter-form__input:required:valid ~ .newsletter-form__toggle::before {
+  content: "Thank You! 😊";
+}
+.newsletter .newsletter-card .newsletter-checkbox:not(:checked) + .newsletter-form-container .newsletter-form__input:required:valid ~ .newsletter-form__toggle {
+  pointer-events: none;
+  cursor: default;
+}
+.newsletter .newsletter-card .newsletter-form-container,
+.newsletter .newsletter-card .newsletter-form,
+.newsletter .newsletter-card .newsletter-form__toggle {
+  width: 15em;
+  height: 4em;
+}
+.newsletter .newsletter-card .newsletter-form-container {
+  position: relative;
+  font-weight: 500;
+}
+.newsletter .newsletter-card .newsletter-form,
+.newsletter .newsletter-card .newsletter-form__toggle {
+  position: absolute;
+  border-radius: 6.25em;
+  background-color: #f9e17e;
+  transition: 0.2s;
+}
+.newsletter .newsletter-card .newsletter-form {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.625em;
+  box-sizing: border-box;
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+.newsletter .newsletter-card .newsletter-form__toggle {
+  color: #454545;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter .newsletter-card .newsletter-form__toggle::before {
+  font-size: 1.6em;
+  content: attr(data-title);
+}
+.newsletter .newsletter-card .newsletter-form__input,
+.newsletter .newsletter-card .newsletter-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 5em;
+  box-sizing: border-box;
+}
+.newsletter .newsletter-card .newsletter-form__input,
+.newsletter .newsletter-card .newsletter-form__button-label {
+  font-size: 1.5em;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0s;
+}
+.newsletter .newsletter-card .newsletter-form__input {
+  color: rgba(69, 69, 69, 0.6117647059);
+  height: 100%;
+  width: 100%;
+  padding: 0 0.714em;
+}
+.newsletter .newsletter-card .newsletter-form__input::placeholder {
+  color: currentColor;
+}
+.newsletter .newsletter-card .newsletter-form__input:required:valid {
+  color: #454545;
+}
+.newsletter .newsletter-card .newsletter-form__input:required:valid + .newsletter-form__button-label {
+  color: #ffffff;
+}
+.newsletter .newsletter-card .newsletter-form__input:required:valid + .newsletter-form__button-label::before {
+  pointer-events: initial;
+}
+.newsletter .newsletter-card .newsletter-form__button-label {
+  color: #454545;
+  height: 100%;
+  width: auto;
+}
+.newsletter .newsletter-card .newsletter-form__button-label::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  pointer-events: none;
+  cursor: pointer;
+}
+.newsletter .newsletter-card .newsletter-form__button {
+  color: inherit;
+  padding: 0;
+  height: 100%;
+  width: 4em;
+  background-color: #f9e17e;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #454545;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+.footer .footer-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* flex-direction: column; */
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.footer .footer-links a:hover {
+  color: #f9e17e;
+}
+.footer .footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.footer .footer__social a i {
+  padding: 0.5rem;
+}
+.footer .footer__social a:hover {
+  color: #f9e17e;
+}
+
+/*# sourceMappingURL=newstyle.css.map */

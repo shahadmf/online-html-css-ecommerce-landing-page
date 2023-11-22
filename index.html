@@ -1,0 +1,201 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Buy the best sunglasses to protect your eye!"
+    />
+    <meta
+      name="keywords"
+      content="accessories, accessory ,sunglasses, women, sunny"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles/newstyle.css" />
+    <title>Sunny Shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Logo -->
+      <img
+        src="src/Images/sunny-logo.png"
+        alt="Sunny's Logo"
+        id="Logo"
+        style="width: 100px"
+      />
+
+      <!-- Navigation bar -->
+      <nav role="navigation">
+        <div class="nav__links">
+          <a href="#Hero">Home</a>
+          <a href="#Hero">About Us</a>
+          <a href="#products">Products</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--- Hero Section --->
+      <section id="Hero">
+        <div class="hero">
+          <div class="hero__content">
+            <h1>Sunny Shop</h1>
+            <p>Buy the best sunglasses to protect your eye!</p>
+            <button>Buy it now!</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products">
+        <h2>Products</h2>
+        <div class="products">
+          <div class="product">
+            <img
+              src="src/Images/sunglasses-1.jpeg"
+              class="product__img"
+              alt="Sunglasses 1"
+            />
+            <div class="product-content">
+              <h3 class="product__title">Sunglasses 1</h3>
+              <p class="product__text">A black glasses with green lence</p>
+              <button class="product__btn">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              src="src/Images/sunglasses-2.jpeg"
+              alt="Sunglasses 2"
+              class="product__img"
+            />
+            <div class="product-content">
+              <h3 class="product__title">Sunglasses 2</h3>
+              <p class="product__text">A black glasses with pink lence</p>
+              <button class="product__btn">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              src="src/Images/sunglasses-3.jpeg"
+              alt="Sunglasses 3"
+              class="product__img"
+            />
+            <div class="product-content">
+              <h3 class="product__title">Sunglasses 3</h3>
+              <p class="product__text">A pink glasses with brown lence</p>
+              <button class="product__btn">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              src="src/Images/sunglasses-4.jpeg"
+              alt="Sunglasses 4"
+              class="product__img"
+            />
+            <div class="product-content">
+              <h3 class="product__title">Sunglasses 4</h3>
+              <p class="product__text">A black glasses with red lence</p>
+              <button class="product__btn">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section id="reviews">
+        <h2>Reviews</h2>
+        <div class="reviews">
+          <div class="review">
+            <div class="review-header">Great product!</div>
+            <div class="review-author">By Sarah</div>
+            <div class="review-date">September 25, 2023</div>
+            <div class="review-content">
+              This glasses exceeded my expectations. I highly recommend it!
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="review-header">Just WOW!</div>
+            <div class="review-author">By Ahmed</div>
+            <div class="review-date">October 3, 2023</div>
+            <div class="review-content">
+              This glasses exceeded my expectations. I highly recommend it!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section id="newsletter-subscription">
+        <div class="newsletter">
+          <div class="newsletter-card">
+            <h3 class="newsletter-title">STAY INFORMED!</h3>
+            <p class="newsletter-text">
+              Subscribe to our newsletter to receive the latest news and
+              promotions.</p>
+
+            <input class="newsletter-checkbox" type="checkbox" id="checkbox">
+            <div class="newsletter-form-container">
+              <form class="newsletter-form" action="">
+                <input class="newsletter-form__input" placeholder="E-mail" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                <label class="newsletter-form__button-label" for="checkbox">
+                  <button class="newsletter-form__button" type="button">Send</button>
+                </label>
+                <label class="newsletter-form__toggle" for="checkbox" data-title="Subscribe Now!"></label>
+              </form>
+            </div>
+
+            <!-- <div class="form">
+              <form action="">
+                <input
+                  id="email"
+                  type="email"
+                  class="newsletter__input"
+                  placeholder="Enter your email"
+                />
+                <button class="newsletter__btn">Subscribe</button>
+              </form>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- <div class="footer-links">
+        <a href="#Hero">Home</a>
+        <a href="#Hero">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#reviews">Reviews</a>
+      </div> -->
+
+      <div class="footer__social">
+        <a href="#"> <i class="fab fa-facebook"></i>Facebook</a>
+        <a href="#"> <i class="fab fa-youtube"></i>Visit our YouTube channel</a>
+        <a href="#"> <i class="fab fa-instagram"></i>Instagram</a>
+      </div>
+
+      <p>© 2020 Sunny Shop</p>
+      <!-- here huld be the scoial media logos connected with the account -->
+    </footer>
+  </body>
+</html>
